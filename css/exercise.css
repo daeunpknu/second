@@ -1,0 +1,131 @@
+html, body {
+    overflow-x: hidden; /* 수평 스크롤은 숨기기 */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: left; /* 모든 문구 왼쪽 정렬 */
+}
+
+.gray-line {
+    width: 80%; /* 타이틀과 이미지 사이의 회색 선 폭을 조정 */
+    height: 1px;
+    background-color: rgb(228, 228, 228);
+    margin-left: 2px;
+}
+
+.title-container .gray-line {
+    width: 0%; /* 사이드바 타이틀에서 사용되는 회색 선의 폭을 100%로 설정 */
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: -30px;
+}
+
+.section {
+    margin-bottom: 40px;
+    margin-top: -16px;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.image-container {
+    justify-content: space-around; /* 이미지를 가로 일직선에 배치 */
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+
+.image-container img {
+    max-width: 38%;
+    height: auto;
+}
+
+.sub-section {
+    margin-bottom: 20px;
+}
+
+.sub-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.red-line {
+    width: 40px;
+    height: 7px;
+    background-color: rgb(214, 7, 77);
+    margin-bottom: -15px;
+    border-radius: 35%;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* 스크롤 버튼 스타일 추가 */
+.scroll-button {
+    display: none; /* 기본적으로 버튼 숨기기 */
+    position: fixed; /* 고정 위치 */
+    bottom: 50px; /* 화면 아래쪽에 위치 */
+    right: 45px; /* 화면 오른쪽에 위치 */
+    width: 50px; /* 버튼 너비 */
+    height: 50px; /* 버튼 높이 */
+    background-color: rgb(60, 60, 60); /* 버튼 배경색 */
+    color: #fff; /* 버튼 글자색 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    line-height: 50px; /* 텍스트 중앙 정렬을 위한 높이 설정 */
+    font-size: 30px; /* 글자 크기 */
+    border-radius: 20%; /* 모서리 둥글게 */
+    cursor: pointer; /* 포인터 커서 */
+    z-index: 1000; /* 다른 요소보다 위에 표시 */
+    transition: all 0.3s ease;
+}
+
+.sidebar .radio-label1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    margin-bottom: 40px; /* 목록 간의 거리 증가 */
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.sidebar .radio-label1 input {
+    margin-right: 10px;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid black;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.sidebar .radio-label1 input:checked::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(180, 211, 87);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

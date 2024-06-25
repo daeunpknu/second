@@ -1,0 +1,21 @@
+body {
+    font-family: 'Noto', "맑은 고딕", Malgun Gothic, "돋움", Dotum, "굴림", Gulim, Arial, Verdana, AppleGothic, UnDotum, sans-serif;
+}
+
+.scroll-button {
+    display: none; /* 기본적으로 버튼 숨기기 */
+    position: fixed; /* 고정 위치 */
+    bottom: 50px; /* 화면 아래쪽에 위치 */
+    right: 45px; /* 화면 오른쪽에 위치 */
+    width: 50px; /* 버튼 너비 */
+    height: 50px; /* 버튼 높이 */
+    background-color: rgb(60, 60, 60); /* 버튼 배경색 */
+    color: #fff; /* 버튼 글자색 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    line-height: 50px; /* 텍스트 중앙 정렬을 위한 높이 설정 */
+    font-size: 30px; /* 글자 크기 */
+    border-radius: 20%; /* 모서리 둥글게 */
+    cursor: pointer; /* 포인터 커서 */
+    z-index: 1000; /* 다른 요소보다 위에 표시 */
+    transition: all 0.3s ease;
+}

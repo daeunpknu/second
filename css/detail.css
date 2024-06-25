@@ -1,0 +1,160 @@
+/* detail.css */
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* 화면이 넘지 않도록 설정 */
+    margin: 0; /* 기본 여백 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+}
+h2 {
+    font-size: 36px; /* 토마토 글씨 크기 조정 */
+    margin-bottom: 25px;
+    margin-left: 680px;
+    text-align: left; /* 왼쪽 정렬 */
+    margin-top: -90px; /* 요소를 위로 이동 */
+}
+
+.line {
+    width: 40%;
+    height: 1px;
+    background-color: rgb(228, 228, 228);
+    margin-bottom: 20px; /* 아래 여백 */
+    margin-left: 670px;
+    margin-top: -10px; /* 요소를 위로 이동 */
+}
+
+.short-red-line {
+    width: 40px;
+    height: 5px;
+    background-color: rgb(214, 7, 77);
+    margin-bottom: -20px; /* 아래 여백 */
+    margin-left: 670px;
+    border-radius: 25%;
+    margin-top: 35px;
+}
+
+.subtitle {
+    font-size: 28px;
+    margin-bottom: -50px;
+    margin-left: 68px;
+    margin-top: 30px; /* 요소를 위로 이동 */
+    font-weight: 540;
+}
+
+.layout-container {
+    display: flex;
+    align-items: flex-start; /* 아이템들을 상단에 정렬 */
+    margin-left: 675px;
+    margin-top: -10px; /* 요소를 위로 이동 */
+}
+
+.circle-container {
+    display: flex;
+    flex-direction: column; /* 아이템들을 세로로 배치 */
+    align-items: flex-start;
+    margin-right: 20px; /* circle과 food-description 사이 간격 조정 */
+}
+
+.circle1 {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(214, 7, 77);
+    border-radius: 50%;
+    justify-content: center;
+    margin-bottom: -75px;
+}
+
+.circle1 .arrow {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.small-circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    margin-top: 2px;
+}
+
+#food-description {
+    max-width: 600px; /* food-description의 최대 너비 설정 */
+    margin-top: -610px;
+    margin-left: 60px;
+}
+
+#food-description p {
+    font-weight: 540;
+    font-size: 20px;
+    margin-top: 82px;
+    margin-left: -10px;
+    text-align: left; /* 왼쪽 정렬 */;
+}
+
+#food-description ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#food-description ul li {
+    margin-top: 20px; /* 리스트 항목 간격 조정 */
+    text-align: left; /* 왼쪽 정렬 */;
+    margin-left: 20px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-top: -32px;
+}
+
+.text {
+    margin-left: 10px; /* small-circle과 문구 사이 간격 조정 */
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 11px;
+}
+
+.benefits {
+    margin-top: -15px; /* '섭취 시 좋은 점' 아래에 리스트 추가 */
+    margin-left: -50px;
+    font-size: 17px;
+}
+
+.cautions {
+    margin-top: -15px; /* '섭취 시 좋은 점' 아래에 리스트 추가 */
+    margin-left: -50px;
+    font-size: 17px;
+}
+
+/* 세로로 긴 직사각형 */
+.side-rectangle {
+    position: fixed;
+    top: 90px;
+    left: 180px;
+    width: 28%;
+    height: 100%;
+    background-color: grey;
+}
+
+.side-rectangle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 기존 수정된 부분 */
+.small-circle::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 6px solid rgb(172, 200, 211); /* 변경된 색상 */
+    clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 50% 50%);
+}

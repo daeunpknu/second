@@ -1,0 +1,136 @@
+
+
+.image-background {
+    position: absolute;
+    top: 700px;
+    left: 0;
+    width: 900px;
+    height: 500px; /* 원하는 높이로 설정 */
+    left: 150px;
+    background: url('../img/background.png') no-repeat center;
+    background-size: cover; /* 배경 이미지 크기 조정 */
+    z-index: -1; /* 모든 요소 뒤에 배치 */
+}
+
+.container {
+    position: relative;
+    z-index: 1; /* 모든 요소 앞으로 배치 */
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 30px;
+}
+
+.section {
+    margin-bottom: 40px;
+    margin-top: -16px;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: -600px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around; /* 이미지를 가로 일직선에 배치 */
+    margin-bottom: 60px;
+    margin-top: 60px;
+    margin-left: -30px;
+    margin-right: 130px;
+    position: relative; /* 배경 이미지 위에 표시 */
+    z-index: 2; /* 배경 이미지 위에 배치 */
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden; /* 부모 요소를 벗어나는 요소 숨김 */
+}
+
+.image-wrapper img {
+    width: auto;
+    display: block; /* 부모 요소의 크기를 차지하도록 설정 */
+}
+
+.image-wrapper:first-child img {
+    height: 350px; /* 첫 번째 이미지를 더 크게 설정 */
+}
+
+.image-wrapper:nth-child(2) img,
+.image-wrapper:nth-child(3) img,
+.image-wrapper:nth-child(4) img {
+    height: 300px; /* 나머지 이미지를 동일한 크기로 설정 */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0; /* 초기 상태에서 오버레이 높이를 0으로 설정 */
+    background: linear-gradient(to top, rgba(177, 76, 183, 0.9), rgba(51, 116, 173, 0.9)); /* 그라데이션 추가 */
+    transition: height 0.2s ease-in-out, opacity 0.2s ease-in-out, visibility 0.2s ease-in-out; /* 부드러운 전환 효과 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* 텍스트 색상 */
+    font-size: 25px; /* 텍스트 크기 */
+    font-weight: bold;
+    text-align: center;
+    opacity: 0; /* 초기 상태에서 투명도 설정 */
+    visibility: hidden; /* 초기 상태에서 숨김 */
+}
+
+.image-wrapper:hover .overlay {
+    height: 100%; /* 커서가 이미지 위에 있을 때 오버레이 높이 설정 */
+    opacity: 1; /* 투명도 설정하여 보이도록 함 */
+    visibility: visible; /* 보이도록 설정 */
+}
+
+.sub-section {
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 300px;
+}
+
+.sub-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: -50px;
+}
+
+.gray-line {
+    width: 70%; /* 타이틀과 이미지 사이의 회색 선 폭을 조정 */
+    height: 1px;
+    background-color: rgb(228, 228, 228);
+    margin-left: 280px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.title-container .gray-line {
+    width: 0%; /* 사이드바 타이틀에서 사용되는 회색 선의 폭을 100%로 설정 */
+}
+
+.red-line {
+    width: 40px;
+    height: 7px;
+    background-color: rgb(214, 7, 77);
+    margin-bottom: 60px;
+    margin-top: 55px;
+    border-radius: 60%;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}

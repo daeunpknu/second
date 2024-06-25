@@ -1,0 +1,234 @@
+html, body {
+    overflow-x: hidden; /* 수평 스크롤은 숨기기 */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    min-height: 100vh; /* 컨테이너가 최소 화면 높이를 차지하도록 설정 */
+    width: 100%; /* 컨테이너 너비를 100%로 설정 */
+    /* overflow: auto;  이 부분을 주석 처리 */
+}
+
+.main-content {
+    display: flex;
+    margin-top: 40px;
+}
+
+.detail-content {
+    display: flex;
+    margin-top: 200px;
+    margin-left: -250px;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: transparent; /* 박스를 투명하게 */
+    padding: 30px;
+    text-align: left;
+    margin-left: 180px;
+    font-size: 23px;
+    position: relative; /* 고정 위치 대신 상대 위치 사용 */
+    transition: top 0.5s ease-out; /* 부드러운 이동 애니메이션 */
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 200px; /* 사이드바 옆 공간 확보 */
+}
+
+.food-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3열 */
+    gap: 50px; /* 그림 간의 거리를 충분히 줌 */
+    row-gap: 90px;
+    width: 100%;
+    margin: 0 auto;
+    margin-left: -200px;
+}
+
+.food-item {
+    width: 200px;
+    height: 300px;
+    background-color: black;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.5s; /* 애니메이션 시간 설정 */
+}
+
+.food-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.5s; /* 이미지 확대 애니메이션 시간 설정 */
+}
+
+.food-item:hover img {
+    transform: scale(1.1); /* 이미지 확대 */
+}
+
+.hero-image-container {
+    position: relative;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    margin: 20px 0;
+    margin-top: 100px;
+    width: 100%;
+    height: auto; /* 높이를 자동으로 조정 */
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    white-space: nowrap; /* 추가된 부분 */
+    opacity: 0; /* 초기 투명도 설정 */
+    font-family: Verdana, sans-serif; /* Verdana 글꼴로 설정 */
+}
+
+.hero-text2 {
+    position: absolute;
+    top: 47%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    white-space: nowrap; /* 추가된 부분 */
+    opacity: 0; /* 초기 투명도 설정 */
+    font-family: Verdana, sans-serif; /* Verdana 글꼴로 설정 */
+}
+
+.top-bar-container {
+    opacity: 0; /* 초기 투명도 설정 */
+    transform: translateY(-20px); /* 초기 위치 설정 */
+}
+
+.animated {
+    animation: fadeInUp 1s forwards; /* 추가된 애니메이션 */
+}
+
+.hero-text.animated {
+    animation: fadeInDown 1.5s forwards; /* 추가된 애니메이션 */
+    animation-delay: 0.5s; /* 애니메이션 지연 시간 설정 */
+}
+
+.hero-text2.animated {
+    animation: fadeInDown 1.5s forwards; /* 추가된 애니메이션 */
+    animation-delay: 0.5s; /* 애니메이션 지연 시간 설정 */
+}
+
+.top-bar-container.animated {
+    animation: fadeInDown 1s forwards; /* 추가된 애니메이션 */
+    animation-delay: 0.3s; /* 애니메이션 지연 시간 설정 */
+}
+
+/* 커스텀 CSS */
+.title-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.title-container::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(180, 211, 87);
+    border-radius: 50%;
+    margin-right: 10px;
+    z-index: -1;
+    transform: translateX(-50%);
+}
+
+.title-text {
+    font-size: 28px;
+    margin-left: -5px; /* 문구를 왼쪽으로 이동 */
+    margin-bottom: 15px;
+    white-space: nowrap;
+}
+
+.sidebar .radio-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    margin-bottom: 40px; /* 목록 간의 거리 증가 */
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.sidebar .radio-label input {
+    margin-right: 10px;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid black;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.sidebar .radio-label input:checked::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(180, 211, 87);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 애니메이션 정의 */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
